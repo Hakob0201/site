@@ -1,0 +1,326 @@
+/**
+*
+* CSS for the PLAY'N'WAVE skin
+*
+*/
+/*
+    VARIABLES
+*/
+/*
+*
+*   STYLES
+*
+*/
+.waveplayer.wvpl-skin-play_n_wave {
+  --height: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  user-select: none;
+  height: var(--height);
+  color: RGB(var(--foreground));
+  /**
+    *
+    * Primary interface of the player
+    *
+    */
+}
+
+.waveplayer.wvpl-skin-play_n_wave a.wvpl-link {
+  text-decoration: none !important;
+}
+
+.waveplayer.wvpl-skin-play_n_wave div, .waveplayer.wvpl-skin-play_n_wave span {
+  font-size: 12px;
+}
+
+.waveplayer.wvpl-skin-play_n_wave div.wvpl-wave {
+  height: var(--height);
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-position, .waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs .wvpl-position, .waveplayer.wvpl-skin-play_n_wave .wvpl-duration, .waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs .wvpl-duration {
+  font-size: 10px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave {
+  --height: 80px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave .wvpl-position, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm .wvpl-position, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave .wvpl-duration, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm .wvpl-duration {
+  font-size: 11px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave {
+  --height: 100px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave .wvpl-position, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md .wvpl-position, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave .wvpl-duration, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md .wvpl-duration {
+  font-size: 12px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave {
+  --height: 120px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave .wvpl-position, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-lg .wvpl-position, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave .wvpl-duration, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-lg .wvpl-duration {
+  font-size: 13px;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.wvpl-shape-square .wvpl-left-box {
+  border-radius: 0%;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.wvpl-shape-rounded .wvpl-left-box {
+  border-radius: 10%;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.wvpl-shape-circle .wvpl-left-box {
+  border-radius: 100%;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-wave {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+  flex: 1 0 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.loading:not(.playing) .wvpl-wave {
+  opacity: 0;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-controls {
+  display: flex;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  transition: all .25s;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-controls.wvpl-inactive {
+  opacity: 0;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-icon {
+  font-family: "Font Awesome 5 Free", FontAwesome;
+  font-weight: 900;
+  flex: 1;
+  cursor: pointer;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-icon::before {
+  width: 1em;
+  text-align: center;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-play {
+  font-size: 20px;
+  line-height: var(--height);
+  text-align: center;
+}
+
+.product-row .waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-play {
+  line-height: var(--height);
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-disabled {
+  cursor: default;
+  visibility: hidden;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-controls .wvpl-icon::before {
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-play::before {
+  content: "\f04b";
+}
+
+.waveplayer.wvpl-skin-play_n_wave.playing .wvpl-play::before {
+  content: "\f04c";
+}
+
+.waveplayer.wvpl-skin-play_n_wave.analyzing .wvpl-play,
+.waveplayer.wvpl-skin-play_n_wave.loading .wvpl-play,
+.waveplayer.wvpl-skin-play_n_wave.seeking .wvpl-play {
+  animation: wvpl-spin 1.5s infinite linear;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.analyzing .wvpl-play::before,
+.waveplayer.wvpl-skin-play_n_wave.loading .wvpl-play::before,
+.waveplayer.wvpl-skin-play_n_wave.seeking .wvpl-play::before {
+  content: "\f110";
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-button {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-button:hover::before {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-waveform {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-timeline {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 45%;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-centerline {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 1px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  transition: all .25s;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-pointer {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 3px solid #c62;
+  opacity: 0;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  transition: all .25s;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-pointer.active, .waveplayer.wvpl-skin-play_n_wave .wvpl-centerline.active {
+  opacity: .67;
+}
+
+.waveplayer.wvpl-skin-play_n_wave div.wvpl-position, .waveplayer.wvpl-skin-play_n_wave div.wvpl-duration {
+  width: 5ch;
+  height: min-content;
+  padding: 0.1em 0.25em;
+  z-index: 4;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-position {
+  left: 0;
+}
+
+.waveplayer.wvpl-skin-play_n_wave .wvpl-duration {
+  right: 0;
+}
+
+.waveplayer.wvpl-skin-play_n_wave.analyzing .wvpl-position, .waveplayer.wvpl-skin-play_n_wave.analyzing .wvpl-duration {
+  visibility: hidden;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave div, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave span {
+  font-size: 14px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-play {
+  font-size: 28px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs div, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs span {
+  font-size: 12px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs .wvpl-icon.wvpl-play {
+  font-size: 24px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm div, .wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm span {
+  font-size: 14px;
+}
+
+.wvpl-sqmd.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm .wvpl-icon.wvpl-play {
+  font-size: 28px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave div, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave span {
+  font-size: 16px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave .wvpl-icon.wvpl-play {
+  font-size: 32px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs div, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs span {
+  font-size: 12px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs .wvpl-icon.wvpl-play {
+  font-size: 24px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm div, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm span {
+  font-size: 14px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm .wvpl-icon.wvpl-play {
+  font-size: 28px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md div, .wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md span {
+  font-size: 16px;
+}
+
+.wvpl-sqlg.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md .wvpl-icon.wvpl-play {
+  font-size: 32px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs div, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs span {
+  font-size: 12px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-xs .wvpl-icon.wvpl-play {
+  font-size: 24px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm div, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm span {
+  font-size: 14px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-sm .wvpl-icon.wvpl-play {
+  font-size: 28px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md div, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md span {
+  font-size: 16px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-md .wvpl-icon.wvpl-play {
+  font-size: 32px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-lg div, .wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-lg span {
+  font-size: 18px;
+}
+
+.wvpl-sqxl.waveplayer.wvpl-skin-play_n_wave.wvpl-size-lg .wvpl-icon.wvpl-play {
+  font-size: 36px;
+}
+
+/*# sourceMappingURL=style.css.map */

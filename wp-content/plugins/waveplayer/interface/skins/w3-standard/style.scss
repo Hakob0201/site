@@ -1,0 +1,651 @@
+/**
+*
+* CSS for the WAVEPLAYER 3 STANDARD skin
+*
+*/
+
+/*
+*
+*   STYLES
+*
+*/
+
+.waveplayer.wvpl-skin-w3-standard {
+    --height: 60px;
+    --font-size: 15px;
+    font-size: var(--font-size);
+    padding: 10px;
+    user-select: none;
+    background-color: RGB(var(--background));
+    color: RGB(var(--foreground));
+    border-radius: 4px;
+    border: 1px solid RGB(var(--highlight-shade));
+    display: grid;
+    grid-template-areas: "cover" "wave" "bar" "playlist";
+    grid-template-rows: auto var(--height) auto 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    position: relative;
+    overflow: hidden;
+    min-width: 240px;
+    &::before {
+        position: absolute;
+        width: calc(100% + 60px);
+        height: calc(100% + 60px);
+        top: -30px;
+        left: -30px;
+        background-image: var(--poster-image);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+        filter: blur(5px);
+        opacity: .25;
+        transition: background-image 1s ease-in-out;
+        -moz-transition: background-image 1s ease-in-out;
+    }
+    &.wvpl-exhibition-mode::before {
+        content: "";
+    }
+    @at-root .wvpl-sqxs#{&}, .wvpl-sqsm#{&} {
+        grid-template-areas: "wave wave" "cover bar" "playlist playlist";
+        grid-template-columns: var(--height) 1fr;
+        grid-template-rows: var(--height) auto 1fr;
+    }
+    @at-root .wvpl-sqmd#{&}, .wvpl-sqlg#{&}, .wvpl-sqxl#{&} {
+        grid-template-areas: "cover wave" ". bar" ". playlist";
+        grid-template-columns: var(--height) 1fr;
+        grid-template-rows: var(--height) auto 1fr;
+        &.wvpl-full-width-playlist {
+            grid-template-areas: "cover wave" "bar bar" "playlist playlist";
+        }
+    }
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    a.wvpl-link {
+        text-decoration: none!important;
+        align-self:center;
+    }
+    a {
+        color: RGB(var(--highlight));
+        &:hover{
+            color: RGB(var(--highlight-shade));
+        }
+    }
+
+
+    @at-root .wvpl-sqxxs#{&} {
+        font-size: .95em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 16px; height: 16px; }
+    }
+    @at-root .wvpl-sqxs#{&} {
+        --height: 80px;
+        font-size: .96em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 16px; height: 16px; }
+    }
+    @at-root .wvpl-sqsm#{&} {
+        --height: 120px;
+        font-size: .98em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 20px; height: 20px; }
+        @at-root .wvpl-size-xs#{&} {
+            --height: 80px;
+            div, span { font-size: .96em; }
+        }
+    }
+    @at-root .wvpl-sqmd#{&} {
+        --height: 160px;
+        font-size: 1em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 24px; height: 24px; }
+        @at-root .wvpl-size-xs#{&} {
+            --height: 80px;
+            div, span { font-size: .96em; }
+        }
+        @at-root .wvpl-size-sm#{&} {
+            --height: 120px;
+            div, span { font-size: .98em; }
+        }
+    }
+    @at-root .wvpl-sqlg#{&} {
+        --height: 200px;
+        font-size: 1.02em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 28px; height: 28px; }
+        @at-root .wvpl-size-xs#{&} {
+            --height: 80px;
+            div, span { font-size: .96em; }
+        }
+        @at-root .wvpl-size-sm#{&} {
+            --height: 120px;
+            div, span { font-size: .98em; }
+        }
+        @at-root .wvpl-size-md#{&} {
+            --height: 160px;
+            div, span { font-size: 1em; }
+        }
+    }
+    @at-root .wvpl-sqxl#{&} {
+        --height: 200px;
+        font-size: 1.04em;
+        img.wvpl-thumbnail, img.wvpl-playlist-thumbnail { width: 32px; height: 32px; }
+        @at-root .wvpl-size-xs#{&} {
+            --height: 80px;
+            div, span { font-size: .96em; }
+        }
+        @at-root .wvpl-size-sm#{&} {
+            --height: 120px;
+            div, span { font-size: .98em; }
+        }
+        @at-root .wvpl-size-md#{&} {
+            --height: 160px;
+            div, span { font-size: 1em; }
+        }
+    }
+
+
+    /**
+    *
+    * Primary interface of the player
+    *
+    */
+
+    .wvpl-cover {
+		@at-root .wvpl-sqxxs#{&} {
+		}
+        width: 100%;
+        display: flex;
+        grid-area: cover;
+        flex-shrink: 0;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+        margin: auto;
+        @at-root .wvpl-sqxxs#{&} {
+            margin-bottom: -10px;
+        }
+        @at-root .wvpl-shape-circle#{&} {
+            border-radius: 100%;
+        }
+        @at-root .wvpl-shape-rounded#{&} {
+            border-radius: 20%;
+        }
+        &::after {
+            content: "";
+            display: table-cell;
+            padding-bottom: 100%;
+			@at-root :not(.active)#{&} {
+				padding-bottom: 0;
+			}
+            @at-root .wvpl-sqxxs#{&} {
+                padding-bottom: 50%;
+            }
+        }
+        .wvpl-poster {
+            background-image: var(--poster-image);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            opacity:1;
+            transition: background-image 150ms ease-in-out;
+            @at-root .wvpl-style-color-scheme#{&} {
+                @media (prefers-color-scheme: dark) {
+                    filter: brightness(.8);
+                }
+            }
+            @at-root .wvpl-style-dark#{&} {
+                filter: brightness(.7);
+            }
+        }
+    }
+    .wvpl-wave {
+        grid-area: wave;
+        padding: 0;
+        position:relative;
+        display:flex;
+        flex-grow:1;
+        overflow:hidden;
+        opacity: 1;
+        transition: opacity 150ms ease-in-out;
+        margin: 0;
+        @at-root .wvpl-sqxxs#{&} {
+            margin-bottom: -10px;
+        }
+        @at-root .wvpl-sqxs#{&}, .wvpl-sqsm#{&} {
+            margin-bottom: -10px;
+            margin-top: -10px;
+        }
+        .wvpl-waveform {
+            height: 100%;
+            width: 0;
+            padding: 0;
+            margin: 0 5px;
+            flex: 1 0 auto;
+            overflow: hidden;
+        }
+        div.wvpl-position, div.wvpl-duration {
+            width: auto;
+            height: auto;
+            align-self: center;
+            text-align: center;
+            background: transparent;
+            color: RGB(var(--foreground));
+            font-size: .75em;
+            width: 4ch;
+        }
+        @at-root .wvpl-sqxxs#{&} div.wvpl-position {
+            display:none
+        }
+        @at-root .wvpl-sqxxs#{&} div.wvpl-duration {
+            display:none
+        }
+        @at-root .loading:not(.playing)#{&} {
+            opacity: 0;
+        }
+    }
+    .wvpl-interface {
+        grid-area: bar;
+        flex: 0;
+        display: flex;
+        min-width: 0;
+        flex-wrap: wrap;
+        .wvpl-controls,  .wvpl-info {
+            display: flex;
+            -webkit-transition: all .25s;
+            -moz-transition: all .25s;
+            transition: all .25s;
+            opacity: 1;
+            position:relative;
+            z-index: 1;
+        }
+        .wvpl-controls {
+            flex: 1 0 100%;
+            @at-root .wvpl-sqsm#{&}, .wvpl-sqmd#{&}, .wvpl-sqlg#{&}, .wvpl-sqxl#{&} {
+                flex: 0 0 8em;
+                margin-bottom: 0;
+            }
+            .wvpl-icon{
+                font-family:"Font Awesome 5 Free", FontAwesome;
+                font-weight:900;
+                flex: 1;
+                text-align:center;
+                color: RGB(var(--foreground-shade));
+                align-self: center;
+                cursor: pointer;
+                &.wvpl-disabled {
+                	cursor: default;
+                    opacity: .2;
+                }
+                &.wvpl-play {
+                    font-size: 1.5em;
+                }
+                &:not(.wvpl-disabled){
+                    &::before {
+                        width: 1.75em;
+                        height: 1.75em;
+                        line-height: 1.75em;
+                        border-radius: 1.75em;
+                        transition: background-color 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out;
+                    }
+                    &:hover::before {
+                        background-color: RGB(var(--background-shade));
+                        color: RGB(var(--highlight));
+                    }
+                }
+            }
+        }
+        .wvpl-controls.wvpl-inactive {
+            opacity: 0;
+        }
+    }
+
+    .wvpl-title {
+        font-weight: 600;
+    }
+    div.wvpl-playlist {
+        font-size: .94em;
+        grid-area: playlist;
+        width:100%;
+        position:relative;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .wvpl-playlist-wrapper {
+        width:100%;
+        position:relative;
+        > ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+            max-height: 400px;
+            overflow-y: auto;
+            position:relative;
+            scrollbar-color: #0006 #0003;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                transition: all 250ms ease-in-out;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                transition: all 250ms ease-in-out;
+            }
+            &:hover{
+                &::-webkit-scrollbar-track {
+                    background-color: #0003;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #0006;
+                }
+            }
+            > li {
+                text-align: left;
+                display:flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0.5em;
+                border-top: 1px solid RGB(var(--highlight-shade));
+                cursor: pointer;
+                transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+                &:hover {
+                    background: RGB(var(--highlight),.25);
+                    color: RGB(var(--foreground-shade));
+                    a {
+                        color: RGB(var(--highlight));
+                        &:hover{
+                            color: RGB(var(--highlight-shade));
+                        }
+                    }
+                }
+                &.playing {
+                    background: RGB(var(--highlight-shade),.25);
+                    color: RGB(var(--foreground));
+                    font-weight: bold;
+                    &:hover {
+                        background: RGB(var(--highlight),.25);
+                        color: RGB(var(--foreground-shade));
+                        a {
+                            color: RGB(var(--highlight));
+                            &:hover{
+                                color: RGB(var(--highlight-shade));
+                            }
+                        }
+                    }
+                }
+                a {
+                    color: RGB(var(--highlight));
+                    &:hover{
+                        color: RGB(var(--highlight-shade));
+                    }
+                }
+                > * {
+                    &:not(:first-child) {
+                        padding-left: .5em;
+                    }
+                }
+                span {
+                    align-self: center;
+                    &.wvpl-playlist-title {
+                        cursor:pointer;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    &.wvpl-playlist-time {
+                        flex: 0 0;
+                    }
+                }
+                .wvpl-playlist-stats {
+                    flex: 0 0;
+                    align-items:center;
+                }
+            }
+        }
+    }
+
+    img.wvpl-thumbnail, img.wvpl-playlist-thumbnail {
+        object-fit: cover;
+        cursor:pointer;
+        flex: 0 0;
+        border-radius: 3px;
+        @at-root .wvpl-shape-circle#{&} {
+            border-radius: 100%;
+        }
+        @at-root .wvpl-shape-rounded#{&} {
+            border-radius: 20%;
+        }
+    }
+
+    .wvpl-stats {
+        margin-top: .2em;
+        span.wvpl-value {
+            font-size:.75em;
+            font-weight:normal;
+            vertical-align:1px;
+            margin-left: 4px;
+            max-width: 4ch;
+            display: none;
+            @at-root .wvpl-sqsm#{&}, .wvpl-sqmd#{&}, .wvpl-sqlg#{&}, .wvpl-sqxl#{&} {
+                display: flex;
+            }
+        }
+    }
+
+    .wvpl-controls .wvpl-icon::before,
+    .wvpl-stats.wvpl-icon::before {
+        display:inline-block;
+        text-align:center;
+    }
+    .wvpl-volume-slider {
+        margin: 0 10px;
+    }
+
+    /**
+    *
+    * Volume overlay
+    *
+    */
+
+    div.wvpl-volume-overlay {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        left:0;
+        top: 0;
+        background: #0007;
+        color: #fffc;
+        font-size: 6em;
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        transition: all 0.25s;
+        opacity: 0;
+    }
+
+    .wvpl-volume-overlay.dragging {opacity: 1;}
+
+    div.wvpl-volume-overlay span[class^="char"] {
+        display: inline-block;
+        width: 15px;
+        text-align:center;
+    }
+
+    :not(.wvpl-stats) + .wvpl-stats {
+        margin-left: 16px;
+        padding-left: .5em;
+        @at-root .wvpl-sqsm#{&} {
+            margin-left: 20px;
+        }
+        @at-root .wvpl-sqmd#{&} {
+            margin-left: 24px;
+        }
+        @at-root .wvpl-sqlg#{&} {
+            margin-left: 28px;
+        }
+        @at-root .wvpl-sqxl#{&} {
+            padding-left: 0;
+            margin-left: 32px;
+        }
+    }
+
+    /**
+    *
+    * Information panel of the current track
+    *
+    */
+
+    .wvpl-infobar {
+        flex-grow: 1;
+        flex-direction: column;
+        z-index:2;
+        max-width: 100%;
+        margin: auto;
+        opacity: 1;
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        transition: all .25s;
+        overflow: hidden;
+        &.wvpl-inactive {opacity: 0;}
+        .wvpl-playing-info {
+            border-radius: 0.2em;
+            /*display: flex;*/
+            align-self: flex-start;
+            position: relative;
+            padding: 0.2em 0.4em;
+            height: 100%;
+            overflow: hidden;
+            .wvpl-infoblock {
+                text-align: left;
+                display:flex;
+                align-items: center;
+                height: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                line-height: 2em;
+                @at-root .wvpl-sqsm#{&}, .wvpl-sqmd#{&}, .wvpl-sqlg#{&}, .wvpl-sqxl#{&} {
+                    justify-content: flex-start;
+                }
+                > *:not(:first-child) {
+                    padding-left: .5em;
+                }
+                .wvpl-separator + * {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+                .wvpl-icon {
+                    margin-top: .5em;
+                    @at-root .wvpl-sqsm#{&}, .wvpl-sqmd#{&}, .wvpl-sqlg#{&}, .wvpl-sqxl#{&} {
+                        font-size: inherit;
+                        margin-top: 0;
+                    }
+                }
+                a {
+                    color: RGB(var(--highlight));
+                    text-decoration: none;
+                    outline: none;
+                    &:hover{
+                        color: RGB(var(--highlight-shade));
+                    }
+                }
+            }
+            .wvpl-title {
+            	font-weight: 600;
+                white-space: nowrap;
+                @at-root .wvpl-sqxxs#{&} {
+                    white-space: normal;
+                    text-align: center;
+                }
+            }
+            .wvpl-artist {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .wvpl-tax {
+        flex: 1 1 100%;
+        overflow: hidden;
+        order: 10;
+        padding-left: .5em;
+        margin-left: 16px;
+        margin-top: .2em;
+        @at-root .wvpl-sqsm#{&} {
+            margin-left: 20px;
+        }
+        @at-root .wvpl-sqmd#{&} {
+            margin-left: 24px;
+        }
+        @at-root .wvpl-sqlg#{&} {
+            margin-left: 28px;
+        }
+        @at-root .wvpl-sqxl#{&} {
+            margin-left: 32px;
+        }
+        a {
+            text-transform: lowercase;
+            text-decoration: none!important;
+            font-size: .85em;
+            line-height: normal;
+            display: inline-block;
+            font-weight: 600;
+            color: RGB(var(--foreground));
+            padding: 0;
+            margin-right:5px;
+            border-radius: 999px;
+            &:hover {
+                color: RGB(var(--background));
+            }
+        }
+    }
+
+
+    /**
+    *
+    * Waveform of the current track
+    *
+    */
+
+
+    .wvpl-timeline {
+        z-index: 4;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        top: 45%;
+    }
+
+    .wvpl-centerline {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        height: 1px;
+        background: #fff;
+        opacity: 0;
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        transition: all .25s;
+    }
+
+    .wvpl-pointer {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 3px solid #c62;
+        opacity: 0;
+        -webkit-transition: all .25s;
+        -moz-transition: all .25s;
+        transition: all .25s;
+    }
+    .wvpl-pointer.active,  .wvpl-centerline.active {
+        opacity: .67;
+    }
+
+}

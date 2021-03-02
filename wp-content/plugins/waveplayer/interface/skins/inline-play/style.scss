@@ -1,0 +1,124 @@
+/**
+*
+* CSS for the INLINE PLAY skin
+*
+*/
+
+/*
+    VARIABLES
+*/
+
+$media-phone-landscape: "screen and (min-width: 667px)";
+$media-tablet-portrait: "screen and (min-width: 768px)";
+$media-tablet-landscape: "screen and (min-width: 960px)";
+$media-laptop: "screen and (min-width: 1200px)";
+
+/*
+*
+*   STYLES
+*
+*/
+
+.waveplayer.wvpl-skin-inline-play  {
+    display: inline-block;
+    user-select: none;
+    color: RGB(var(--foreground));
+    background-color: RGB(var(--background));
+    margin: 0 1ch;
+    padding: .3em;
+    a.wvpl-link {
+        text-decoration: none!important;
+    }
+    &.wvpl-shape-square {border-radius: 0%;}
+    &.wvpl-shape-rounded {border-radius: 10%;}
+    &.wvpl-shape-circle {border-radius: 100%;}
+    &:hover {
+        color: RGB(var(--highlight));
+        background-color: RGB(var(--highlight-shade));
+    }
+
+    div, span {font-size: 12px;}
+
+    /**
+    *
+    * Primary interface of the player
+    *
+    */
+
+    .wvpl-controls {
+        display: flex;
+        opacity: 1;
+        position:relative;
+    }
+    .wvpl-controls.wvpl-inactive {
+        opacity: 0;
+    }
+
+    .wvpl-icon{
+        font-family:"Font Awesome 5 Free", FontAwesome;
+        font-weight:900;
+        flex: 1;
+        cursor:pointer;
+        &::before{
+            width:1em;
+            text-align:center;
+        }
+        &.wvpl-play{
+            line-height: normal;
+            text-align:center;
+            padding: .25em;
+        }
+        &.wvpl-disabled {
+        	cursor: default;
+            visibility: hidden;
+        }
+    }
+
+    .wvpl-controls .wvpl-icon::before {
+        display:inline-block;
+        text-align:center;
+    }
+    .wvpl-play::before           {content:"\f04b";}
+    &.playing .wvpl-play::before {content:"\f04c";}
+    &.analyzing .wvpl-play,
+    &.loading .wvpl-play,
+    &.seeking .wvpl-play {
+        animation: wvpl-spin 1.5s infinite linear;
+    }
+    &.analyzing .wvpl-play::before,
+    &.loading .wvpl-play::before,
+    &.seeking .wvpl-play::before{
+        content:"\f110";
+    }
+
+    .wvpl-button {
+        cursor:pointer;
+    }
+    .wvpl-icon.wvpl-button:hover::before {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+
+    &.wvpl-size-xs {
+        .wvpl-icon.wvpl-play{
+            font-size: 16px;
+        }
+    }
+    &.wvpl-size-sm {
+        .wvpl-icon.wvpl-play{
+            font-size: 20px;
+        }
+    }
+    &.wvpl-size-md {
+        .wvpl-icon.wvpl-play{
+            font-size: 24px;
+        }
+    }
+    &.wvpl-size-lg {
+        .wvpl-icon.wvpl-play{
+            font-size: 28px;
+        }
+    }
+
+
+}

@@ -1,0 +1,415 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 02:27:43
+* VERSION: 1.3.40.1
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.3.26                                |7.3.22
+OS__________________: Linux                                 |Linux
+CREATED_____________: 2021-02-12 13:29:28
+WP VERSION__________: 5.6.1
+DUP VERSION_________: 1.3.40.1
+DB__________________: 5.7.32
+DB TABLES___________: 14
+DB ROWS_____________: 9,298
+DB FILE SIZE________: 5.28MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.3.22 | SAPI: cgi-fcgi
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.2.15 (Cloud Linux)
+DOC ROOT____________: "/var/www/user81735/data/www/covidstories.kg"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://www.covidstories.kg/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "shellexec_unzip"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "/var/www/user81735/data/www/covidstories.kg/20210208_site_[HASH]_20210212132928_archive.zip"
+SIZE________________: 98.67MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+
+
+START ZIP FILE EXTRACTION SHELLEXEC >>> 
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 02:27:54 - RUNTIME: 11.5170 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): No such file or directory [CODE:2|FILE:/var/www/user81735/data/www/covidstories.kg/dup-installer/classes/class.db.php|LINE:48]
+DATABASE CONNECTION ERROR: No such file or directory[ERRNO:2002]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 02:30:02
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.51 -- Build Server: 5.7.32
+FILE SIZE:	dup-database__[HASH].sql (2.34MB)
+TIMEOUT:	5000
+MAXPACK:	16777216
+SQLMODE:	NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/var/www/user81735/data/www/covidstories.kg/dup-installer/dup-installer-data__[HASH].sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.6.51] is less than the build version [5.7.32].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	14
+RENAMED TABLES:	0
+QUERIES RAN:	9372
+
+stories: (2)
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (276)
+wp_postmeta: (8344)
+wp_posts: (591)
+wp_term_relationships: (29)
+wp_term_taxonomy: (10)
+wp_termmeta: (4)
+wp_terms: (10)
+wp_usermeta: (53)
+wp_users: (2)
+Removed '33' cache/transient rows
+
+INSERT DATA RUNTIME: 8.0065 sec.
+STEP-2 COMPLETE @ 02:30:10 - RUNTIME: 8.0729 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 02:30:22
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "site"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/www/wwwroot/test.randpages.com"
+path_new______________: "/var/www/user81735/data/www/covidstories.kg"
+siteurl_______________: "http://www.covidstories.kg"
+url_old_______________: "http://test.randpages.com"
+url_new_______________: "http://www.covidstories.kg"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "stories"_________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   276][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:  8344][PG:   3][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:   591][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:    29][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:    10][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:    10][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:    53][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www/wwwroot/test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  2:"\/www\/wwwroot\/test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  3:"%2Fwww%2Fwwwroot%2Ftest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  4:"\www\wwwroot\test.randpages.com" =================> "/var/www/user81735/data/www/covidstories.kg"
+	SEARCH  5:"\\www\\wwwroot\\test.randpages.com" ==============> "\/var\/www\/user81735\/data\/www\/covidstories.kg"
+	SEARCH  6:"%5Cwww%5Cwwwroot%5Ctest.randpages.com" ===========> "%2Fvar%2Fwww%2Fuser81735%2Fdata%2Fwww%2Fcovidstories.kg"
+	SEARCH  7:"//test.randpages.com" ============================> "//www.covidstories.kg"
+	SEARCH  8:"\/\/test.randpages.com" ==========================> "\/\/www.covidstories.kg"
+	SEARCH  9:"%2F%2Ftest.randpages.com" ========================> "%2F%2Fwww.covidstories.kg"
+	SEARCH 10:"https://www.covidstories.kg" =====================> "http://www.covidstories.kg"
+	SEARCH 11:"https:\/\/www.covidstories.kg" ===================> "http:\/\/www.covidstories.kg"
+	SEARCH 12:"https%3A%2F%2Fwww.covidstories.kg" ===============> "http%3A%2F%2Fwww.covidstories.kg"
+--------------------------------------
+SCANNED:	Tables:14 	|	 Rows:9322 	|	 Cells:48555 
+UPDATED:	Tables:3 	|	 Rows:597 	|	 Cells:601 
+ERRORS:		0 
+RUNTIME:	0.625700 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""user81735_covid""
+	UPDATE DB_USER ""user81735_covid""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""176.126.165.135""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__[HASH]' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 02:30:23 - RUNTIME: 0.6717 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================

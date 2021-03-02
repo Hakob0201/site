@@ -1,0 +1,247 @@
+/**
+*
+* CSS for the THUMB'N'WAVE skin
+*
+*/
+
+/*
+    VARIABLES
+*/
+
+$media-phone-landscape: "screen and (min-width: 667px)";
+$media-tablet-portrait: "screen and (min-width: 768px)";
+$media-tablet-landscape: "screen and (min-width: 960px)";
+$media-laptop: "screen and (min-width: 1200px)";
+
+/*
+*
+*   STYLES
+*
+*/
+
+.waveplayer.wvpl-skin-thumb_n_wave{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    padding:0;
+    user-select: none;
+    width: 100%;
+    // max-width: 300px;
+    margin: 0 auto;
+	font-size: 14px;
+    a.wvpl-link {
+        text-decoration: none!important;
+    }
+
+    /**
+    *
+    * Primary interface of the player
+    *
+    */
+
+    .wvpl-main-block {
+        width: 100%;
+        // max-width:300px;
+        max-height:300px;
+        display: flex;
+        flex-shrink: 0;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        border-radius:3px;
+		&::before{
+	        content:"";
+	        width:100%;
+	        padding-top: 100%;
+	    }
+    }
+    div.wvpl-main-block,
+    div.wvpl-wave {
+        font-size: 10px;
+    }
+
+    .wvpl-wave {
+        position: absolute;
+        bottom:0;
+        overflow:hidden;
+        opacity: 1;
+        width:100%;
+        height:25%;
+        margin:0;
+        z-index: 1;
+        @at-root .wvpl-style-light#{&} {
+            background-color: RGB( var(--foreground-shade), .85);
+        }
+        @at-root .wvpl-style-dark#{&} {
+            background-color: RGB( var(--background-shade), .85);
+        }
+        @at-root .wvpl-style-color-scheme#{&} {
+            @media (prefers-color-scheme: light) {
+                background-color: RGB( var(--foreground-shade), .85);
+            }
+            @media (prefers-color-scheme: dark) {
+                background-color: RGB( var(--background-shade), .85);
+            }
+        }
+        padding:0 5px;
+        transition: opacity 0.15s ease-in-out;
+    }
+    &.loading:not(.playing) .wvpl-wave {
+        opacity: 0;
+    }
+
+    .wvpl-controls {
+        display: flex;
+        width:100%;
+        height:100%;
+        align-items:center;
+        justify-content: center;
+        opacity: 1;
+        position:absolute;
+        top: 0;
+        z-index: 1;
+        &.wvpl-inactive {
+            opacity: 0;
+        }
+        .wvpl-icon{
+            font-family:"Font Awesome 5 Free", FontAwesome;
+            font-weight:900;
+            flex: 1;
+            color: RGB(var( --background ));
+            cursor: pointer;
+            text-shadow: 0 0 2px RGB(var( --foreground-shade ));
+			font-size:3em;
+            &::before {
+                width:1em;
+                display:inline-block;
+                text-align:center;
+            }
+            &.wvpl-play{
+				font-size:4em;
+                text-align:center;
+                &:hover {
+                    color: RGB(var(--background-shade));
+                }
+                &::before           {content:"\f04b";}
+            }
+            &.wvpl-prev{
+                padding-left:.1em;
+                &::before           {content:"\f053";}
+            }
+            &.wvpl-next{
+                padding-right:.1em;
+                text-align:right;
+                &::before           {content:"\f054";}
+            }
+        }
+
+
+        .wvpl-icon.wvpl-disabled {
+        	cursor: default;
+            visibility: hidden;
+        }
+    }
+
+    &.playing .wvpl-icon.wvpl-play::before {content:"\f04c";}
+    &.analyzing .wvpl-icon.wvpl-play,
+    &.loading .wvpl-icon.wvpl-play,
+    &.seeking .wvpl-icon.wvpl-play {
+        animation: wvpl-spin 1.5s infinite linear;
+    }
+    &.analyzing .wvpl-icon.wvpl-play::before,
+    &.loading .wvpl-icon.wvpl-play::before,
+    &.seeking .wvpl-icon.wvpl-play::before{
+        content:"\f110";
+    }
+
+    /**
+    *
+    * Volume overlay
+    *
+    */
+
+    .wvpl-poster {
+        background-image: var(--poster-image);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        opacity:1;
+        top: 0;
+        transition: opacity 0.15s ease-in-out;
+        @at-root .wvpl-style-dark#{&} {
+            filter: brightness(.75);
+        }
+        @at-root .wvpl-style-color-scheme#{&} {
+            @media (prefers-color-scheme: dark) {
+                filter: brightness(.75);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &.loading:not(.playing) .wvpl-poster {
+        opacity: 0;
+    }
+
+    .wvpl-spin::before {
+        content:"\f110";
+        animation: wvpl-spin 1.5s infinite linear;
+    }
+
+    .wvpl-button {
+        cursor:pointer;
+    }
+    .wvpl-icon.wvpl-button:hover::before {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    /**
+    *
+    * Waveform of the current track
+    *
+    */
+
+    .wvpl-waveform {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .wvpl-timeline {
+        z-index: 4;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        top: 45%;
+    }
+
+    .wvpl-centerline {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        height: 1px;
+        background: #fff;
+        opacity: 0;
+    }
+
+    .wvpl-pointer {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 3px solid #c62;
+        opacity: 0;
+    }
+    .wvpl-pointer.active, .wvpl-centerline.active {
+        opacity: .67;
+    }
+    .wvpl-info,.wvpl-volume{
+        visibility:hidden;
+    }
+}

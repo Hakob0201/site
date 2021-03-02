@@ -1,0 +1,136 @@
+/**
+*
+* CSS for the INLINE PLAY skin
+*
+*/
+/*
+    VARIABLES
+*/
+/*
+*
+*   STYLES
+*
+*/
+.waveplayer.wvpl-skin-inline-play {
+  display: inline-block;
+  user-select: none;
+  color: RGB(var(--foreground));
+  background-color: RGB(var(--background));
+  margin: 0 1ch;
+  padding: .3em;
+  /**
+    *
+    * Primary interface of the player
+    *
+    */
+}
+
+.waveplayer.wvpl-skin-inline-play a.wvpl-link {
+  text-decoration: none !important;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-shape-square {
+  border-radius: 0%;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-shape-rounded {
+  border-radius: 10%;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-shape-circle {
+  border-radius: 100%;
+}
+
+.waveplayer.wvpl-skin-inline-play:hover {
+  color: RGB(var(--highlight));
+  background-color: RGB(var(--highlight-shade));
+}
+
+.waveplayer.wvpl-skin-inline-play div, .waveplayer.wvpl-skin-inline-play span {
+  font-size: 12px;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-controls {
+  display: flex;
+  opacity: 1;
+  position: relative;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-controls.wvpl-inactive {
+  opacity: 0;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-icon {
+  font-family: "Font Awesome 5 Free", FontAwesome;
+  font-weight: 900;
+  flex: 1;
+  cursor: pointer;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-icon::before {
+  width: 1em;
+  text-align: center;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-icon.wvpl-play {
+  line-height: normal;
+  text-align: center;
+  padding: .25em;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-icon.wvpl-disabled {
+  cursor: default;
+  visibility: hidden;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-controls .wvpl-icon::before {
+  display: inline-block;
+  text-align: center;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-play::before {
+  content: "\f04b";
+}
+
+.waveplayer.wvpl-skin-inline-play.playing .wvpl-play::before {
+  content: "\f04c";
+}
+
+.waveplayer.wvpl-skin-inline-play.analyzing .wvpl-play,
+.waveplayer.wvpl-skin-inline-play.loading .wvpl-play,
+.waveplayer.wvpl-skin-inline-play.seeking .wvpl-play {
+  animation: wvpl-spin 1.5s infinite linear;
+}
+
+.waveplayer.wvpl-skin-inline-play.analyzing .wvpl-play::before,
+.waveplayer.wvpl-skin-inline-play.loading .wvpl-play::before,
+.waveplayer.wvpl-skin-inline-play.seeking .wvpl-play::before {
+  content: "\f110";
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-button {
+  cursor: pointer;
+}
+
+.waveplayer.wvpl-skin-inline-play .wvpl-icon.wvpl-button:hover::before {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-size-xs .wvpl-icon.wvpl-play {
+  font-size: 16px;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-size-sm .wvpl-icon.wvpl-play {
+  font-size: 20px;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-size-md .wvpl-icon.wvpl-play {
+  font-size: 24px;
+}
+
+.waveplayer.wvpl-skin-inline-play.wvpl-size-lg .wvpl-icon.wvpl-play {
+  font-size: 28px;
+}
+
+/*# sourceMappingURL=style.css.map */
