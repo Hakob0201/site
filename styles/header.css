@@ -1,0 +1,124 @@
+@font-face{
+	font-family: 'Roboto';
+	src: url('../files/fonts/Roboto.woff');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
+}
+
+#header{
+	position: relative;
+	height:70px;
+	max-width:1240px;
+	margin:auto;
+	border-bottom:0.5px solid #000000;
+	display: flex;
+	align-items: center;
+}
+
+#header>*{
+	height:39px;
+	display: flex;
+	align-items: center;
+}
+
+#logo_div span{
+	font-size: 18px;
+}
+
+#search_div{
+	width:300px;
+	margin-left: 449px;
+	position: relative;
+}
+
+#search_div form{
+	width:100%;
+}
+
+#search_input{
+	height:39px;
+	width:264px;
+	border-radius: 50px;
+	border: 0.5px solid #938C8C;
+	outline: none;
+	box-sizing: border-box;
+	padding:0px 63px 0px 45px;
+}
+
+#search{
+	position: relative;
+
+}
+
+#search>*{
+	background-color: inherit
+}
+
+#search label{
+	position:absolute;
+	margin-top:1px;
+	height: 95%;
+	width:20px;
+	box-sizing: border-box;
+	cursor: pointer;
+	right:1px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+#search button{
+	position: absolute;
+	width:55px;
+	right: 38px;
+	top: -0px;
+	height:95%;
+	border:none;
+	outline: none;
+	cursor: pointer;
+	box-shadow: none;
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+#search_logo{
+	box-sizing: border-box;
+	position: absolute;
+	left:0px;
+	top:10px;
+	padding-left: 18px;
+	margin:1px;
+	top:0;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+
+#add_history{
+	margin-left: 38px;
+}
+
+#menu{
+	margin-left: 34px;
+}
+
+#languages{
+	position: absolute;
+	right: 0px;
+}
+
+#languages>*{
+	height:39px;
+	width:46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.selectedLanguage{
+	background: #4F4C4C;
+	color:white;
+}

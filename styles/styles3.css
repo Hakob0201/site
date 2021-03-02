@@ -1,0 +1,261 @@
+#menu{
+	position: relative;
+	cursor: pointer;
+}
+
+#hidden-menu{
+/* 	position: absolute;
+	box-sizing: border-box;
+	width:429px;
+	height: 355px;
+	left: -384px;
+	top:27px;
+	background: #F0F0F0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	padding: 24px 85px 34px 38px;	
+	z-index: 100000000000000000;
+	cursor: default; */
+}
+
+.hiddenMenu{
+	display: none !important;
+}
+
+#hidden-menu a{
+	text-decoration: none;
+	color:black;
+}
+
+#hidden-menu a:not(:first-child){
+	margin-top: 15px;
+}
+
+
+*{margin: 0;padding: 0;}
+
+#content{
+	width:1240px;
+	margin:auto;
+}
+
+#info_div{
+	margin-top: 53px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+#info_div a{
+	font-family: Roboto !important;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+.arrowRight{
+	margin-left: 14px;
+	margin-right: 26px;
+}
+
+#profession-link{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 15px;
+	line-height: 18px;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+#info-user-name-surname{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-left: -2px;
+}
+
+#person{
+	margin-top: 80px;
+	display: flex;
+}
+
+#person img{
+	height: 274px;
+	object-fit: cover;
+}
+
+#person-info{
+	margin-left: 55px;
+	display: flex;
+	flex-direction: column;
+}
+
+#person-info>:first-child{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-bottom: 17px;
+}
+
+#profession{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+/*#border{*/
+	/*background:black;*/
+/*	border: 0.5px solid #000000;*/
+/*	width: 72.39px;*/
+/*	margin-top: 21.63px;*/
+/*	margin-bottom: 22.65px;*/
+/*}*/
+
+
+#bio{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+}
+
+#share{
+	display: flex;
+	margin-top: 61px;
+	flex-direction: column;
+}
+
+#share img{
+	width: 212px;
+	height: 35px;
+	margin-left: -15px;
+}
+
+#photo-description{
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 11px;
+}
+
+#voice-message{
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 37px;
+	margin-bottom: 54px;
+}
+
+#recommendations{
+	width:100%;
+	background: #EFEEEE;
+}
+
+#recommendations-body{
+	margin:auto;
+	padding-top: 25px;
+	position: relative;
+}
+
+#recommendations-heading{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: capitalize;
+	color: #000000;
+	/*margin-top: 414px;*/
+}
+
+#recommendations-show{
+	display: flex;
+	width:1240px;
+	margin:auto;
+	margin-top: 57px;
+}
+
+
+.recommendedUser:not(:first-child){
+	margin-left: 20px;
+}
+
+.recommendedUserData{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 23px;
+}
+
+.recommendedUserProfession{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 18px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 9px;
+}
+
+.recommendedUserProperties{
+	font-family: Roboto;
+	font-style: normal;
+	display: block;
+	font-weight: 200;
+	font-size: 15px;
+	line-height: 18px;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 18px;
+}
+
+#next{
+	position: absolute;
+	top:218px;
+	right:-28.61px;
+}
+
+#prev{
+	position: absolute;
+	top:218px;
+	left:-31.61px;
+}

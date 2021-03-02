@@ -1,0 +1,119 @@
+#menu{
+	position: relative;
+	cursor: pointer;
+}
+
+
+.hiddenMenu{
+	display: none !important;
+}
+
+
+
+@font-face{
+	font-family: 'Roboto';
+	src: url('../files/fonts/Roboto.woff');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
+}
+
+#content{
+	width: 1240px;
+	margin:auto;
+	position: relative;
+}
+
+#info_div{
+	margin-top: 53px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+#info_div a{
+	font-family: Roboto !important;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+#arrow-right{
+	margin-left: 17px;
+	margin-right: 22px;
+}
+
+#people{
+	padding-bottom: 106px;
+}
+
+#row1,#row2{
+	display: flex;
+}
+
+#row2{
+	margin-top: 83px;
+}
+
+.person{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.person:not(:first-child){
+	margin-left: 20px;
+}
+
+.personData{
+	margin-top: 23px;
+}
+
+.nameSurname{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+.profession{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 18px;
+	text-transform: capitalize;
+	color: #000000;
+	margin-top: 9px;
+	margin-bottom: 18px;
+}
+
+.person a{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-decoration-line: underline;
+	text-transform: capitalize;
+	color: #a0a0a0;
+
+}
+
+.person a img{
+	margin-left: 9px;
+}

@@ -1,0 +1,482 @@
+/*header*/
+html
+{
+    margin: unset !important;
+}
+#header {
+    padding: 0 15px;
+}
+
+#right-div {
+    right: 40px !important;
+}
+
+
+.d_store {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 155px;
+}
+.butt{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#info_span {
+    width: unset !important;
+}
+
+.bootstrap-select > .dropdown-toggle {
+    z-index: 0 !important;
+}
+
+#hidden-menu {
+    width: 353px !important;
+    position: absolute;
+    box-sizing: border-box;
+    height: unset !important;
+    top: 15px;
+    left: unset !important;
+    background: #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    
+    z-index: 1 !important;
+}
+
+
+#surname_input,
+#profession_input,
+#name_input,
+#email_input,
+#middlename_input,
+#phone_input,
+#photo_description,
+#photo_source
+{
+/*
+    width: 400px !important;
+    height: 33px !important;
+*/
+}
+#photo_description{
+ width: 169px!important;   
+}
+#photo_source{
+  width: 175px !important;
+}
+#first-raw .this_on_ch:nth-child(1){
+    width: 400px !important;
+    height: 33px !important;
+    outline:none;
+}
+#first-raw .this_on_ch:nth-child(2){
+    width: 320px !important;
+    height: 33px !important;
+    outline:none;
+}#first-raw .this_on_ch:nth-child(3){
+    width: 315px !important;
+    height: 33px !important;
+    outline:none;
+}
+#first-raw #age_div .this_on_ch:nth-child(1){
+    width: 95px !important;
+    height: 33px !important; 
+    outline:none;
+}
+
+#second-raw .this_on_ch:nth-child(1){
+    width: 400px !important;
+    height: 33px !important;
+    outline:none;
+}
+#second-raw .this_on_ch:nth-child(2){
+    width: 320px !important;
+    height: 33px !important;
+    outline:none;
+}
+#second-raw .this_on_ch:nth-child(3){
+    width: 315px !important;
+    height: 33px !important;
+    outline:none;
+}
+/*
+age_div>.this_on_ch:nth-child(1){
+    width: 95px !important;
+    height: 33px !important; 
+}
+*/
+.tbtn{
+        width: 15px;
+    height: 20px;
+    object-fit: contain;
+}
+#upload_photo_div
+{
+    width: 400px !important;
+/*    height: 85px !important;*/
+}
+
+.formInput > label {
+    text-align: left;
+}
+
+#history_textarea {
+    height: 100px !important;
+}
+
+#phone_input
+{
+    width: 320px!important;
+}
+
+#photo_source
+{
+    width: 175px !important;
+}
+
+.formInput:not(:first-child) {
+    margin-left: unset !important;
+}
+
+.btn.dropdown-toggle.btn-default {
+    height: 34px !important;
+}
+.bootstrap-select>.dropdown-toggle{
+    width: 100px!important;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+{
+    width: 100% !important;
+}
+
+#history_textarea
+{
+    width: 400px !important;
+}
+
+.nameSurname
+{
+    text-transform: unset !important;
+}
+
+
+/*search*/
+/* The overlay effect with black background */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9); /* Black with a little bit see-through */
+}
+
+/* The content */
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+
+/* Style the submit button */
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background: #bbb;
+}
+
+
+#header-under-data-p1 {
+    word-break: break-word;
+font-style: normal;
+font-weight: 300;
+font-size: 55px;
+line-height: 66px;
+/* identical to box height */
+
+text-align: center;
+/* font-family: 'RBCGrotesk', serif; */
+}
+#age_input
+{
+    width: 95px !important;
+    height: 33px !important; 
+}
+.dd{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+#header-under1{
+    width: 100% !important;
+    padding: 28px 0 28px 0!important; 
+    margin: auto;
+    box-sizing: border-box;
+}
+#header-under{
+    width: 100% !important;
+    padding-top: 120px !important;
+    margin: auto;
+    box-sizing: border-box;
+}
+.tableColumnSpan {
+    word-break: break-word;
+}
+
+@font-face {
+    font-family: 'RBCGrotesk';
+    src: url('files/fonts/RBCGrotesk.woff');
+}
+
+
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('files/fonts/Grotesk-pro.woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('files/fonts/Roboto.woff');
+}
+@font-face {
+    font-family: 'Roboto-R';
+    src: url('files/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'butler_bold';
+    src: url('files/fonts/butler_bold.woff');
+}
+@font-face {
+    font-family: 'butler_light';
+    src: url('files/fonts/butler_light.woff');
+}
+@font-face {
+    font-family: 'butler_regular';
+    src: url('files/fonts/butler_regular.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+
+#info_div a,
+#info_div span
+{
+    font-family: Roboto !important;
+}
+
+
+/*footer*/
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:1300px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: unset;
+    color: #FFFFFF;
+}
+
+#footer ul {
+    text-align: left;
+}
+
+#footer-part {
+    width: 100%;
+    box-sizing: border-box;
+    background: #5B5959;
+}
+
+#footer_div1 {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 0 18px 0;
+}
+
+#footer li {
+    list-style-type: none;
+}
+
+#footer_ul1 {
+    padding: 48px 0 18px 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#footer_ul2 {
+    padding: 48px 0 18px 0;
+    margin-left: -6px;
+}
+
+#footer_ul3 {
+    padding: 48px 0 18px 0;
+    margin-top: unset !important;
+}
+
+#footer ul li {
+    font-size: 14px;
+    font-weight:100;
+    padding: 5px 0 5px 0 !important;
+}
+
+#header-under-data-description {
+    min-width: unset !important;
+}
+
+#footer_ul1,
+#footer_ul2,
+#footer_ul3 {
+    margin-left: unset !important;
+}
+
+@media (max-width: 992px) {
+    .tableColumn {
+        margin-right: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer_ul1,
+    #footer_ul2,
+    #footer_ul3 {
+        padding: 0 0 18px 0 !important;
+    }
+
+    .tableColumn{
+        -ms-flex: 0 0 75% !important;
+        flex: 0 0 75% !important;
+        max-width: 75% !important;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .d_store {
+        display: none;
+    }
+}
+
+#people
+{
+    margin-top: 40px !important;
+    margin: unset;
+}
+
+
+.person
+{
+    height: 260px;
+    margin: unset!important;
+    margin-bottom: 150px !important;
+    text-align: left!important;
+}
+
+.person > img {
+    height: 220px;
+    width: 255px;
+	object-fit:cover;
+}
+
+.profession,
+#adding-button,
+#header-under-data
+{
+    text-transform: unset !important;
+}
+
+#hidden-menu a:hover
+{
+    color: #000;
+	background:#fff;
+}
+#hidden-menu a:not(:first-child){
+margin-top: 0px!important
+}
+#hidden-menu a{
+	padding: 10px 0px 10px 30px;
+}
+#hidden-search label
+{
+    padding: unset;
+    margin: unset;
+    padding: 9px 0 0 15px !important;
+}
+
+#search button
+{
+    position: absolute !important;
+    width: 60px !important;
+    right: 10px !important;
+    top: 1px !important;
+    height: 95% !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    color: #777272 !important;
+}
+
+#search_div form
+{
+    top: unset !important;
+    margin-top: unset !important;
+}
+
